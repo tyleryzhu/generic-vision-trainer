@@ -1,0 +1,33 @@
+AUG:
+  COLOR_JITTER: 0.4
+DATA:
+  BATCH_SIZE: 1024
+  DATA_PATH: "../data/"
+  DATASET: "cifar10"
+  IMG_SIZE: 80
+ENABLE_AMP: True
+MODEL:
+  NAME: revvit
+  NUM_CLASSES: 10
+  DROP_RATE: 0.0
+  VIT:
+    PATCH_SIZE: 5 
+    DEPTH: 4
+    NUM_HEADS: 8
+    EMBED_DIM: 256
+TRAIN:
+  EPOCHS: 100
+  WARMUP_EPOCHS: 20
+  LR: 3e-4
+  MIN_LR: 3e-5
+  WARMUP_LR: 3e-5
+  LR_SCHEDULER:
+    NAME: "cosine"
+  OPTIMIZER:
+    NAME: "adamw"
+    EPS: 1e-8
+    BETAS: (0.9, 0.999)
+    MOMENTUM: 0.9
+OUTPUT: "output/revvitP"
+SAVE_FREQ: 50 
+PRINT_FREQ: 10 
