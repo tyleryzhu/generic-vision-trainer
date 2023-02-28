@@ -13,8 +13,8 @@ The optimizer is also step-based rather than epoch-based, which is a bit more fl
 To run an example, try running the ```train_resnet18.sh``` script. This will train a resnet18 on the CIFAR10 dataset.
 
 ## Todos:
-[] Multiple slurm submit options (PySlurm and submitit). 
-[] Proper wandb support with loggers (D2 like?). 
+- [ ] Multiple slurm submit options (PySlurm and submitit). 
+- [ ] Proper wandb support with loggers (D2 like?). 
 
 
 ## Nice repository references and inspirations
